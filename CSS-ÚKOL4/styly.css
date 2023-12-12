@@ -1,48 +1,55 @@
-h1{
-    font-family: sans-serif;
-    font-size: 7vw;
-    color: brown;
+.inline-container, .inline-block-container, .block-container, .flex-container{
+    border: 1px solid black;
 }
 
-div p, h2{
-    font-family: Courier New;
-    font-size: 2em;
+.inline-div{
+    display: inline;
+    background-color: black;
 }
 
-strong{
-    font-style: italic;
+.inline-block-div{
+    display: inline-block;
+    background-color: red;
 }
 
-.seznam{
-    font-size: 3rem;
+.block-div{
+    display: block;
+    background-color: green;
 }
 
-.vstup{
-    font: system-ui;
-    font-size: 1.5em;
+.flex-div{
+    background-color: blue;
 }
 
-#jmeno{
-    background-color:#B5651d;
+.flex-container{
+    display: flex;
+    justify-content: space-evenly;
 }
 
-li:hover{
-    background-color:lightgrey;
-}
-
-table, td, th{
+.inline-div, .inline-block-div, .block-div, .flex-div{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    text-align: center;
+    color: gray;
+    font-family: monospace;
     font-size: 2rem;
-    border-collapse: collapse;
-    border: 3px solid black;
+    transition: background-color 3s;
 }
 
-thead{
-    background-color:darkgrey;
-    color:white;
+.inline-div:hover, .inline-block-div:hover, .block-div:hover, .flex-div:hover{
+    background-color: purple;
 }
 
-tbody{
-    background-color: white;
-    color:darkgrey
+@keyframes Animace{
+    0%{width: 100px;}
+    
+    100%{width: 200px;}
 }
 
+.inline-div, .inline-block-div, .block-div, .flex-div{
+    animation-name: Animace;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
