@@ -1,6 +1,5 @@
 const express = require('express');
 const Person = require('./person');
-
 const app = express();
 app.listen(7707);
 
