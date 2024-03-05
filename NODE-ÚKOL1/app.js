@@ -1,20 +1,19 @@
 const express = require('express');
 const Person = require('./person');
 const app = express();
-app.listen(7707);
+const path = require('path');
 
 app.use(express.static(__dirname));
-
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/random-person', (req, res) => {
-  const randomPerson = new Person(
+  const randomPerson = new Person (
     getRandomName(),
     getRandomSurname(),
     generateRandomId()
-  );
+);
 
   res.json(randomPerson);
 });
@@ -27,8 +26,10 @@ function getRandomName() {
 function getRandomSurname() {
     const names = ["Novák", "Svoboda", "Černý", "Bílý", "Veselý", "Kučera"];
     return names[Math.floor(Math.random() * names.length)];
-  }
+}
 
 function generateRandomId() {
   return Math.floor(Math.random() * 1000);
 }
+
+app.listen(7707);
