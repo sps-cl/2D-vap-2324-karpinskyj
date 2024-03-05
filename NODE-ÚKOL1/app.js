@@ -25,7 +25,7 @@ app.get('/random-person', (req, res) => {
 });
 
 function getRandomName() {
-  const names = ["Petr", "David", "Tadeáš", "Filip", "Jan", "Josef", "Tomáš", ];
+  const names = ["Petr", "David", "Tadeáš", "Filip", "Jan", "Josef", "Tomáš"];
   return names[Math.floor(Math.random() * names.length)];
 }
 
