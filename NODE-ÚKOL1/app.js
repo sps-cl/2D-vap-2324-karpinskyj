@@ -3,7 +3,9 @@ const Person = require('./person');
 const app = express();
 const path = require('path');
 
+app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname));
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
