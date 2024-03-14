@@ -6,31 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="app.js" defer></script>
     <h1>Formulář</h1>
     <form action="/uloz-uzivatele" method="post">
         <input type="text" name="jmeno" placeholder="Jméno" required>
         <input type="text" name="prijmeni" placeholder="Přijmení" required>
         <input type="submit" value="Poslat">
     </form>
-
-    <script>
-        async function poslat() {
-            let data = await fetch("/uloz-uzivatele",)
-        {
-            method: 'post',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(
-                {
-                    jmeno: document.getElementById('jmeno').value,
-                    prijmeni: document.getElementById('prijmeni').value
-                }
-            )
-        }
-        );
-    }
-    </script>
-    
 </body>
 </html>
