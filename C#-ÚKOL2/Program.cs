@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
-
-namespace ConsoleApp2
+using System.Text;
+using System.Threading.Tasks;
+namespace Úkol2
 {
     public class ComplexNumber
     {
