@@ -1,14 +1,16 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace Úkol2
 {
     public class ComplexNumber
     {
-        public double Real;
-        public double Imaginary;
+        public double Real { get; set; } 
+        public double Imaginary { get; set; } 
+
         public ComplexNumber(double real, double imaginary)
         {
             Real = real;
@@ -17,58 +19,20 @@ namespace Úkol2
 
         public ComplexNumber Add(ComplexNumber other)
         {
-            if (other != null)
-            {
-                return new ComplexNumber(this.Real + other.Real, this.Imaginary + other.Imaginary);
-            }
-            else
-            {
-                Console.WriteLine("nesmi byt prazdny");
-                return null;
-            }
+            double realResult = Real + other.Real;
+            double imaginaryResult = Imaginary + other.Imaginary;
+            return new ComplexNumber(realResult, imaginaryResult);
         }
 
         public ComplexNumber Subtract(ComplexNumber other)
         {
-            if (other != null)
-            {
-                return new ComplexNumber(this.Real - other.Real, this.Imaginary - other.Imaginary);
-            }
-            else
-            {
-                Console.WriteLine("nesmi byt prazdny");
-                return null;
-            }
-        }
-
-        public ComplexNumber Multiply(ComplexNumber other)
-        {
-            if (other != null)
-            {
-                return new ComplexNumber((this.Real * other.Real - this.Imaginary * other.Imaginary), (this.Real * other.Real + this.Imaginary * other.Imaginary));
-            }
-            else
-            {
-                Console.WriteLine("nesmi byt prazdny");
-                return null;
-            }
-        }
-
-        public ComplexNumber Divide(ComplexNumber other)
-        {
-            if (other != null)
-            {
-                return new ComplexNumber(((this.Real * other.Real + this.Imaginary * other.Imaginary) / (other.Real * other.Real + other.Imaginary * other.Imaginary)), ((this.Imaginary * other.Real - this.Real * other.Imaginary) / (other.Real * other.Real + other.Imaginary * other.Imaginary)));
-            }
-            else
-            {
-                Console.WriteLine("nesmi byt prazdny");
-                return null;
-            }
+            double realResult = Real - other.Real;
+            double imaginaryResult = Imaginary - other.Imaginary;
+            return new ComplexNumber(realResult, imaginaryResult);
         }
     }
 
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
