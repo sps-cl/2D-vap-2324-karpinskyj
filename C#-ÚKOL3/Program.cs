@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -81,7 +81,7 @@ namespace Úkol3
 
             else
             {
-                Console.WriteLine("Neznamy prikaz");
+                Console.WriteLine("Neznámý příkaz");
             }
 
         }
@@ -93,7 +93,7 @@ namespace Úkol3
             Slovnik slovnik = new Slovnik();
             while (true)
             {
-                Console.Write("Zadejte prikaz: ");
+                Console.Write("Zadejte příkaz: ");
                 string prikaz = Console.ReadLine();
                 ZpracujPrikaz(slovnik, prikaz);
             }
