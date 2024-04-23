@@ -93,7 +93,6 @@ namespace Úkol3
             Slovnik slovnik = new Slovnik();
             while (true)
             {
-                Console.Write("Zadejte příkaz: ");
                 string prikaz = Console.ReadLine();
                 ZpracujPrikaz(slovnik, prikaz);
             }
